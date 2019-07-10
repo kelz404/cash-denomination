@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 
 import Input from './containers/Input';
+import Denomination from './components/Denomination';
+import convert from './utils/convert';
 
 export class App extends Component {
   state = {
@@ -8,8 +10,9 @@ export class App extends Component {
     results: [],
   };
 
-  convertResult = n => {
-    console.log(n);
+  convertResult = val => {
+    const results = convert(this.state.denomination, val);
+    this.setState({ results });
   };
 
   render() {
@@ -23,6 +26,7 @@ export class App extends Component {
 
         <Input getResult={this.convertResult} />
         <div className="border-bottom border-success w-50 mx-auto" />
+        <Denomination results={this.state.results} />
       </div>
     );
   }
