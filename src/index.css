@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Cabin', sans-serif;
+}
+
+.logo {
+  max-width: 50%;
+}
+
+.logo__caption {
+  float: right;
+}
+
+.app__title {
+  color: #208819;
+  font-size: calc(15px + (35 - 15) * ((100vw - 325px) / (1600 - 325)));
+  font-weight: bolder;
+}
+
+.error {
+  background-color: #fceded;
+  color: #f64747;
+  border: 1px solid #fcc2c3;
+  border-radius: 5px;
+  padding: 12px;
+}
+
+.denominations__list {
+  padding: 13px;
+  margin-top: 10px;
+}
+
+.denomination--mod {
+  background-size: 200%;
+  background-image: linear-gradient(to left, #60a83c, #93c555, #60a83c);
+}
+
+.denomination--mod:hover {
+  background-position: right;
+  transition: 0.2s;
+}
+
+.denomination--mod span {
+  color: #fff;
+  font-weight: 200;
+}
+
+input[type='text'],
+.logo__caption,
+.instruction,
+.denominations__list span,
+.error {
+  font-size: calc(10px + (15 - 10) * ((100vw - 325px) / (1600 - 325)));
+}
+
+@media screen and (max-width: 576px) {
+  .custom--col {
+    width: 55%;
+  }
+  .denomination--mod {
+    max-width: 50%;
+  }
+}
