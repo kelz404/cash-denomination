@@ -3,3 +3,30 @@ body {
   padding: 0;
   font-family: 'Cabin', sans-serif;
 }
+
+.logo {
+  max-width: 50%;
+}
+
+.logo__caption {
+  float: right;
+}
+
+.app__title {
+  color: #208819;
+  font-size: calc(12px + (35 - 12) * ((100vw - 325px) / (1600 - 325)));
+  font-weight: bolder;
+}
+
+input[type='text'],
+.logo__caption,
+.instruction,
+.error {
+  font-size: calc(10px + (15 - 10) * ((100vw - 325px) / (1600 - 325)));
+}
+
+@media screen and (max-width: 576px) {
+  .custom--col {
+    width: 55%;
+  }
+}
